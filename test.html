@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Collection about your life " content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>   Collection </title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+   <script>
+$(function(){
+    $("ul.subs").hide();
+    $("div.main").click(function(){
+        $("ul.subs").slideUp();
+        $("div.arraw").css("display","none");
+         if($("+ul",this).css("display")=="none"){
+             $("+ul",this).slideDown("slow");
+            $("div.arraw",this).css("display","block");
+             console.log($("div.arraw").css("display"));
+             console.log(this);
+         }
+    });
+    
+}
+);
+       
+    </script>
+<style>
+    a , a.btn {
+      text-decoration: none;
+      -webkit-transition: all 0.4s linear;
+       transition: all 0.4s linear;
+}
+ 
+    
+    body, ul, li, div {
+	  margin: 0;
+	  padding: 0;
+   }
+    .header{
+        height:35px;
+    }
+     #nav{
+        margin-left: 30px;
+        width: 190px;
+       
+        float:left;
+         
+    }   
+    
+    #nav ul li ul{    
+        border: 2px solid #54C5CE ;
+        border-radius:10px; 
+        background:#54C5CE ;
+    }
+    #nav li 
+    {
+        list-style:none;
+    }
+    div.main 
+    { 
+        border-radius: 8px;
+        height: 60px;
+        line-height: 60px;
+        cursor: pointer;
+        background :#cce6ff;
+        text-indent:25px;
+        position:relative;
+        font-weight: 700;
+        
+    }
+    div.main:hover{
+        background: #d6e0f5;
+    }
+    div.arraw{
+        
+        width: 0;
+        height: 0;
+        display: none;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent #54C5CE  transparent;
+        z-index:1;
+        position: absolute;
+        bottom: 0;
+        left:20px;
+    
+        
+    }
+   
+    ul.subs li a{
+        color: #F9F9F9;
+        display:block;
+        height: 40px;
+        line-height: 40px;
+        text-indent: 25px;
+        font-size:15px;
+        text-decoration:none;
+        font-weight: 500;
+        text-align: center;
+       
+        
+    }
+    
+    
+    .tabContainer  .controls li
+    {
+        display:inline-block;
+        word-wrap:break-word;
+    }
+    .tabContainer  .controls li a{
+        height: 26px;
+        display:block;
+        padding 0.5em 1em;
+        background:#333;
+        color:#fff;
+        border-radius: 8px 8px 0 0;
+        line-height:26px;
+        
+    }
+        .tabContainer  .controls li.current a, 
+        .tabContainer  .controls li a:hover{
+        color:#333;
+        background:#f0f0f0;    
+        
+    }
+    
+    div.content
+    {   width: 700px;
+        float :left;
+        background: #e6e6ff;
+        margin:30px;
+    }
+    .inner {
+      margin: 20px;
+             
+    }
+    h2{
+    text-align: center;
+    }
+    
+    
+    
+        
+        
+         
+        
+
+    
+</style>
+<body>
+
+
+<div class="header">
+
+</div>
+<div id="nav">
+
+<ul class="">
+    <li>
+       <div class="main"><div class="arraw"></div>關於我</div> 
+       <ul class="subs">
+        <li><a href="test.main">who am I</a></li>
+        <li><a href="test.main">like</a></li>
+        <li><a href="test.main">dislike</a></li>
+        <li><a href="test.main">friend</a></li>
+        </ul>
+    </li>
+</ul>
+<ul class="">
+    <li>
+        <div class="main">吃<div class="arraw"></div></div>
+       <ul class="subs">
+        <li><a href="test.main">常去</a></li>
+        <li><a href="test.main">想去</a></li>
+        <li><a href="test.main">朋友推薦</a></li>
+        <li><a href="test.main">更多</a></li>
+        </ul>
+    </li>
+</ul>
+<ul class="">
+    <li>
+       <div class="main">買<div class="arraw"></div></div>
+       <ul class="subs">
+        <li><a href="test.main">愛店</a></li>
+        <li><a href="test.main">想逛</a></li>
+        <li><a href="test.main">朋友推薦</a></li>
+        <li><a href="test.main">更多</a></li>
+        </ul>
+    </li>
+</ul>
+<ul class="">
+    <li>
+      <div class="main">想法<div class="arraw"></div></div>
+       <ul class="subs">
+            <li><a href="test.main">想做的事</a></li>
+            <li><a href="test.main">收藏</a></li>
+            <li><a href="test.main">別忘記</a></li>
+            <li><a href="test.main">目標設定</a></li>
+        </ul></li>
+</ul>
+ 
+</div> 
+ 
+
+ 
+<!-- 頁籤練習 -->
+   <div class="content">
+   
+   <section class="contentContainer">
+       <h1></h1>
+       <section class="tabContainer">
+       <h2>最新消息</h2>
+       <div class="inner">
+        <ul class="controls">
+            <li><a href="#tab1_1">關注  </a></li>
+            <li><a href="#tab1_2">好友</a></li>
+            <li><a href="#tab1_3">目標</a></li>
+            <li><a  href="#tab1_4">今日進度</a></li>
+        </ul>
+
+        <div class="tabContentContainer">
+            <article id="tab1_1" class="post">h
+                <div class="aa"><img src="" alt=""></div>
+                    <div class="articleContnt">
+                        <header class="entry-header">
+                            <h1></h1>
+                        </header>
+                        <div class="Description">
+                            <p>生日111  編輯</p>
+                        </div>
+                    </div>
+            </article>
+                   <article id="tab1_1" class="post">
+                <div class="aa"><img src="" alt=""></div>
+                    <div class="articleContnt">
+                        <header class="entry-header">
+                            <h1></h1>
+                            
+                        </header>
+                        <div class="Description">
+                            <p>生日222 編輯</p>
+                        </div>
+                    </div>
+            </article>
+        </div>
+        </div>
+                                </section>
+        
+        
+        
+         
+   </section>  
+   
+ 
+   
+   
+   </div>
+    
+
+</body>
+</html>
